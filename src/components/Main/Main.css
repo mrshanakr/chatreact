@@ -1,0 +1,269 @@
+/* Default Light Theme */
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding: 15px;
+    position: relative;
+    background-color: #ffffff;
+    color: #585858;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 5px;
+    color: #585858;
+}
+
+.main img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .cards :hover {
+    background-color: #dfe4ea;
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+    color: #585858;
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info {
+    margin: 13px auto;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.main .result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px, 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Dark Theme */
+.main.dark {
+    background-color: #2c2f36;
+    color: #e0e0e0;
+}
+
+.main.dark .nav {
+    color: #e0e0e0;
+}
+
+.main.dark .greet {
+    color: #bdbdbd;
+}
+
+.main.dark .card {
+    background-color: #3a3d45;
+}
+
+.main.dark .card p {
+    color: #e0e0e0;
+}
+
+.main.dark .cards :hover {
+    background-color: #41454d;
+}
+
+.main.dark .search-box {
+    background-color: #3a3d45;
+}
+
+.main.dark .search-box input {
+    color: #e0e0e0;
+}
+
+.main.dark .search-box img {
+    filter: invert(100%);
+}
+
+.main.dark .card img {
+    background-color: #585858;
+}
+
+.main.dark .loader hr {
+    background: linear-gradient(to right, #4b90ff, #41454d, #4b90ff);
+}
+
+.main.dark .bottom-info {
+    color: #bdbdbd;
+}
+
+/* Light Theme */
+.main.light {
+    background-color: #ffffff;
+    color: #585858;
+}
+
+.main.light .nav {
+    color: #585858;
+}
+
+.main.light .card {
+    background-color: #f0f4f9;
+}
+
+.main.light .search-box {
+    background-color: #f0f4f9;
+}
+
+.main.light .cards :hover {
+    background-color: #dfe4ea;
+}
+
+@media (max-width: 600px) {
+    .main-bottom input {
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img {
+        width: 20px;
+    }
+    .search-box {
+        padding: 5px 10px;
+    }
+    .search-box div {
+        gap: 5px;
+    }
+}
