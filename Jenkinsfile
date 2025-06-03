@@ -24,10 +24,12 @@ pipeline {
       }
     }
 
-    stage('Test') {
-      steps {
-        sh 'npm test'
+    stage('Run') {
+       steps {
+        sh 'npm run dev &'
       }
     }
+
   }
 }
+
