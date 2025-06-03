@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Clone Repo') {
       steps {
-        git 'https://github.com/mrshanakr/chatreact.git'
+        git branch: 'main', url: 'https://github.com/mrshanakr/chatreact.git'
       }
     }
 
@@ -32,3 +32,4 @@ pipeline {
 
   }
 }
+
